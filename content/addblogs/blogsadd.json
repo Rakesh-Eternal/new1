@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "title": "The Future of AI",
+    "snippet": "Explore how artificial intelligence is shaping the world and transforming industries.",
+    "category": "technology",
+    "author": "John Doe",
+    "date": "2024-12-18",
+    "image": "images/ai-future.jpg",
+    "link": "posts/post1.html",
+    "tags": ["AI", "Machine Learning", "Innovation"]
+  },
+  {
+    "id": 2,
+    "title": "10 Tips for a Healthy Lifestyle",
+    "snippet": "Discover simple yet effective tips to live a healthier and more fulfilling life.",
+    "category": "lifestyle",
+    "author": "Jane Smith",
+    "date": "2024-12-20",
+    "image": "images/healthy-lifestyle.jpg",
+    "link": "posts/healthy-lifestyle-tips.html",
+    "tags": ["Health", "Wellness", "Fitness"]
+  },
+  {
+    "id": 3,
+    "title": "Top Tech Trends in 2024",
+    "snippet": "Stay ahead with the latest trends in technology and innovation.",
+    "category": "technology",
+    "author": "Alice Johnson",
+    "date": "2024-12-10",
+    "image": "images/tech-trends.jpg",
+    "link": "posts/tech-trends-2024.html",
+    "tags": ["Technology", "Trends", "Startups"]
+  },
+  {
+    "id": 4,
+    "title": "How to Start a Successful Blog",
+    "snippet": "A complete guide to starting and growing a blog that makes an impact.",
+    "category": "education",
+    "author": "Mike Williams",
+    "date": "2024-12-05",
+    "image": "images/start-blog.jpg",
+    "link": "posts/start-successful-blog.html",
+    "tags": ["Blogging", "Writing", "SEO"]
+  },
+  {
+    "id": 5,
+    "title": "Mastering Digital Marketing",
+    "snippet": "Learn the key strategies to excel in digital marketing in today's competitive world.",
+    "category": "education",
+    "author": "Sara Lee",
+    "date": "2024-12-01",
+    "image": "images/digital-marketing.jpg",
+    "link": "posts/mastering-digital-marketing.html",
+    "tags": ["Digital Marketing", "Advertising", "Social Media"]
+  },
+  {
+    "id": 6,
+    "title": "Travel on a Budget: Tips and Tricks",
+    "snippet": "Learn how to explore the world without breaking the bank.",
+    "category": "travel",
+    "author": "Emily Davis",
+    "date": "2024-11-25",
+    "image": "images/budget-travel.jpg",
+    "link": "posts/travel-on-budget.html",
+    "tags": ["Travel", "Budget", "Adventure"]
+  },
+  {
+    "id": 7,
+    "title": "Coding Best Practices",
+    "snippet": "A guide to writing clean, efficient, and maintainable code.",
+    "category": "technology",
+    "author": "Mark Johnson",
+    "date": "2024-11-20",
+    "image": "images/coding-practices.jpg",
+    "link": "posts/coding-best-practices.html",
+    "tags": ["Programming", "Best Practices", "Development"]
+  },
+  {
+    "id": 8,
+    "title": "Mindfulness and Meditation",
+    "snippet": "Discover the benefits of mindfulness and how to practice meditation daily.",
+    "category": "lifestyle",
+    "author": "Nina Roberts",
+    "date": "2024-11-15",
+    "image": "images/mindfulness.jpg",
+    "link": "posts/mindfulness-and-meditation.html",
+    "tags": ["Mindfulness", "Meditation", "Wellness"]
+  }
+]

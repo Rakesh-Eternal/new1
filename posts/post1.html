@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A blog post about mindfulness in daily life."
+    />
+    <meta
+      name="keywords"
+      content="mindfulness, daily life, personal growth, mental health"
+    />
+    <meta name="author" content="Your Name" />
+    <title>Mindfulness in Daily Life</title>
+    <link rel="stylesheet" href="css/poststyle.css" />
+    <!-- Adjusted path to CSS file -->
+    <script>
+      // Fetch related posts from the JSON file and display based on the category
+      const displayRelatedPosts = async (category) => {
+        const relatedPostsContainer = document.getElementById(
+          "related-posts-container"
+        );
+
+        try {
+          // Fetch the JSON file
+          const response = await fetch("blogsadd.json");
+          const posts = await response.json();
+
+          // Filter posts by category
+          const filteredPosts = posts.filter(
+            (post) => post.category === category
+          );
+
+          // Clear the container
+          relatedPostsContainer.innerHTML = "";
+
+          // Render the filtered posts
+          if (filteredPosts.length > 0) {
+            filteredPosts.forEach((post) => {
+              const postElement = document.createElement("div");
+              postElement.className = "related-post";
+
+              // Create a clickable link for the post
+              const postLink = document.createElement("a");
+              postLink.href = post.link;
+              postLink.textContent = post.title;
+              postLink.title = post.snippet;
+              postLink.target = "_blank"; // Opens the link in a new tab
+              postLink.style.textDecoration = "none";
+              postLink.style.color = "#4CAF50";
+
+              // Append the link to the post element
+              postElement.appendChild(postLink);
+
+              // Append the post element to the container
+              relatedPostsContainer.appendChild(postElement);
+            });
+          } else {
+            // Show a message if no related posts are found
+            relatedPostsContainer.innerHTML =
+              "<p>No related posts found in this category.</p>";
+          }
+        } catch (error) {
+          console.error("Error fetching related posts:", error);
+          relatedPostsContainer.innerHTML =
+            "<p>Failed to load related posts. Please try again later.</p>";
+        }
+      };
+
+      // Example usage: Call this function with the desired category
+      // Pass the category dynamically based on the current post's category
+      displayRelatedPosts("technology");
+    </script>
+    <span category="technology">technology</span>
+  </head>
+  <body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="logo">
+        <a href="#">Mindful Life</a>
+      </div>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Blog</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+      <!-- Blog Post -->
+      <article class="post fade-in">
+        <h1>Mindfulness in Daily Life: How to Stay Present</h1>
+        <p>By Your Name | Published on December 19, 2024</p>
+        <img src="mindfulness.jpg" alt="A person meditating in nature" />
+
+        <p>
+          In today’s fast-paced world, staying present can feel like an
+          impossible task. Our minds are constantly racing, either dwelling on
+          the past or worrying about the future. But mindfulness offers a way to
+          anchor ourselves in the present moment, improving both our mental
+          health and overall quality of life.
+        </p>
+
+        <h2>What is Mindfulness?</h2>
+        <p>
+          Mindfulness is the practice of paying attention to the present moment
+          without judgment. It’s about being fully aware of where we are, what
+          we’re doing, and how we feel. This awareness can help reduce stress,
+          enhance focus, and foster a greater sense of peace.
+        </p>
+
+        <h2>Benefits of Practicing Mindfulness</h2>
+        <p>
+          Here are some key benefits of incorporating mindfulness into your
+          daily routine:
+        </p>
+        <ul>
+          <li>
+            Reduced Stress: Mindfulness helps calm the mind, reducing the
+            physiological effects of stress.
+          </li>
+          <li>
+            Improved Focus: Staying present enhances your ability to concentrate
+            on tasks at hand.
+          </li>
+          <li>
+            Better Emotional Regulation: Mindfulness can help you respond to
+            situations more thoughtfully rather than reacting impulsively.
+          </li>
+          <li>
+            Enhanced Relationships: Being present allows you to connect more
+            deeply with others.
+          </li>
+        </ul>
+
+        <h2>How to Practice Mindfulness Daily</h2>
+        <p>
+          Here are some simple ways to incorporate mindfulness into your daily
+          life:
+        </p>
+        <h3>1. Start Your Day with Intentions</h3>
+        <p>
+          Begin your day by setting a positive intention. This could be as
+          simple as committing to approach challenges with patience or showing
+          kindness to others.
+        </p>
+
+        <h3>2. Practice Mindful Breathing</h3>
+        <p>
+          Take a few minutes each day to focus on your breath. Inhale deeply
+          through your nose, hold for a moment, and exhale slowly through your
+          mouth. This practice can ground you in the present moment.
+        </p>
+
+        <h3>3. Be Present During Daily Tasks</h3>
+        <p>
+          Whether you’re eating, walking, or even washing dishes, try to stay
+          fully engaged in the activity. Notice the sensations, smells, and
+          sounds around you.
+        </p>
+
+        <h3>4. Take Mindful Breaks</h3>
+        <p>
+          Pause periodically throughout your day to check in with yourself. Ask:
+          How do I feel? What do I need at this moment?
+        </p>
+
+        <h2>Conclusion</h2>
+        <p>
+          Mindfulness is a powerful tool for navigating the chaos of modern
+          life. By staying present, you can foster a deeper connection with
+          yourself and the world around you. Start small, and remember,
+          mindfulness is a practice—it’s okay if your mind wanders. Just gently
+          bring your focus back to the present moment.
+        </p>
+        <p>
+          Ready to give mindfulness a try? Share your experiences or tips in the
+          comments below!
+        </p>
+      </article>
+    </div>
+    <!-- Related Posts Section -->
+    <section class="related-posts">
+      <h2>Related Posts</h2>
+      <div class="related-posts">
+        
+     
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2024 Mindful Life. All rights reserved.</p>
+      <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+  </body>
+</html>

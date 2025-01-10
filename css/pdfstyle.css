@@ -1,0 +1,435 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f1f6f9;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease;
+}
+
+/* Header Section */
+header {
+  background: linear-gradient(135deg, #4a90e2, #ff8a00);
+  color: white;
+  padding: 20px 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-out;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  animation: slideInFromTop 1s ease-out;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 15px;
+}
+
+header nav ul li {
+  margin: 0;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+/* Navigation Bar */
+#navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #0099cc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+#navbar .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  list-style: none;
+}
+
+#navbar .menu li {
+  margin: 0 20px;
+}
+
+#navbar .menu li a {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+#navbar .menu li a:hover {
+  color: #ff6600;
+}
+
+/* Search and Sort Section */
+#search-sort {
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(145deg, #fff, #f1f1f1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  border-radius: 10px;
+  animation: fadeInUp 1s ease-out;
+}
+
+#search-sort h2 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  animation: fadeInUp 1s ease-out;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+#search-bar {
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+#search-bar:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+#sort-dropdown {
+  padding: 10px;
+  width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: white;
+  transition: background-color 0.3s ease;
+}
+
+#sort-dropdown:hover {
+  background-color: #f1f1f1;
+}
+
+/* PDF Grid Section */
+.pdf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  transition: grid-template-columns 0.3s ease;
+}
+
+/* PDF Card Container with Beautiful Color Palette */
+.pdf-card {
+  background: linear-gradient(145deg, #fdfdfd, #f3f4f6);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  animation: cardPop 0.5s ease-out;
+}
+
+/* Green Neon Light around PDF container */
+.pdf-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 255, 0, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 0 10px 5px #00ff00, 0 0 20px 10px #00ff00, 0 0 30px 15px #00ff00;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.pdf-card:hover::after {
+  opacity: 1;
+}
+
+.pdf-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.pdf-card img {
+  width: 60px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.pdf-card img:hover {
+  transform: scale(1.1);
+}
+
+.pdf-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: bold;
+}
+
+.pdf-card p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.pdf-card .actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pdf-card .actions button,
+.pdf-card .actions a {
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  background-color: #4a90e2;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 0 8px 2px #00ff00;
+}
+
+.pdf-card .actions button:hover,
+.pdf-card .actions a:hover {
+  background-color: #357abd;
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px 4px #00ff00;
+}
+
+/* PDF Viewer Overlay */
+#pdf-viewer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#pdf-viewer-overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.pdf-viewer {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.pdf-viewer iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff5c5c;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.close-btn:hover {
+  background-color: #e53935;
+  transform: scale(1.1);
+}
+
+/* Upload Section */
+#upload-section {
+  background: linear-gradient(145deg, #f1f1f1, #ffffff);
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+#upload-section h2 {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+#upload-section form {
+  margin: 20px 0;
+}
+
+#pdf-upload {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#upload-btn {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#upload-btn:hover {
+  background-color: #388e3c;
+  transform: translateY(-2px);
+}
+
+.status-message {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, #283593, #3f51b5);
+  padding: 20px;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+footer a {
+  color: #ffd700;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardPop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .pdf-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  #search-bar {
+    width: 100%;
+  }
+
+  #sort-dropdown {
+    width: 100%;
+  }
+}

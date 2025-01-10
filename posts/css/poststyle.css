@@ -1,0 +1,287 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  color: #333;
+  padding: 0 15px;
+  overflow-x: hidden;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #555;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #ddd;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffa500;
+}
+
+/* Container and Post Styles */
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  background-color: #fff;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.post {
+  padding: 30px;
+}
+
+.post h1 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.post p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+.post img {
+  display: block;
+  width: 100%;
+  max-height: 400px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post h2 {
+  font-size: 2rem;
+  color: #444;
+  margin: 20px 0 15px;
+  border-left: 4px solid #ffa500;
+  padding-left: 10px;
+}
+
+.post h3 {
+  font-size: 1.5rem;
+  color: #555;
+  margin-top: 20px;
+}
+
+ul {
+  margin: 20px 0;
+  padding-left: 40px;
+}
+
+ul li {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 10px;
+  list-style: disc;
+}
+
+.post a {
+  color: #ffa500;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.post a:hover {
+  color: #ff7f00;
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  margin-top: 50px;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #ffa500;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ff7f00;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Button Hover Effect */
+.post button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background: #ffa500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.post button:hover {
+  background: #ff7f00;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 10px 15px;
+  }
+
+  .navbar .logo a {
+    font-size: 1.2rem;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  .post h1 {
+    font-size: 2rem;
+  }
+
+  .post p {
+    font-size: 1rem;
+  }
+
+  .post h2 {
+    font-size: 1.5rem;
+  }
+
+  .post h3 {
+    font-size: 1.2rem;
+  }
+
+  ul li {
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
+.related-posts {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.related-posts h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.related-posts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.related-post {
+  width: 280px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+}
+
+.related-post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.related-post img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.related-post h3 {
+  font-size: 1.2rem;
+  margin: 10px;
+  color: #444;
+  text-align: center;
+}
+
+.related-post a {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: #fff;
+  text-align: center;
+  margin: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.related-post a:hover {
+  background-color: #45a049;
+}

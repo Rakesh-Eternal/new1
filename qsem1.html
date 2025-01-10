@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF Manager</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/pdfstyle.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!-- Navigation Bar (Same as index.html) -->
+      <header>
+        <nav id="navbar">
+          <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+      </header>
+      <br></br>
+      <br></br>
+      <!-- Search and Sort Controls -->
+      <div id="gridView">
+        <div class="row my-3 px-3">
+          <div class="col-md-6">
+            <input
+              type="text"
+              id="searchInput"
+              class="form-control"
+              placeholder="Search PDFs by title or subject"
+            />
+          </div>
+          <div class="col-md-6">
+            <select id="sortSelect" class="form-select">
+              <option value="title">Sort by Title</option>
+              <option value="date">Sort by Date</option>
+              <option value="size">Sort by Size</option>
+              <option value="subject">Sort by Subject</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- PDF Grid -->
+        <div class="row px-3" id="pdfGrid">
+          <!-- Dynamic PDF Cards will be added here -->
+        </div>
+      </div>
+
+      <!-- PDF Viewer Section -->
+      <div id="pdfViewerSection">
+        <div class="row my-3 px-3">
+          <button class="btn btn-secondary" onclick="showGridView()">
+            Back
+          </button>
+        </div>
+        <div class="row">
+          <iframe
+            id="pdfViewer"
+            style="width: 100%; height: 80vh; border: none"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let pdfData = [];
+      const pdfGrid = document.getElementById("pdfGrid");
+      const gridView = document.getElementById("gridView");
+      const pdfViewerSection = document.getElementById("pdfViewerSection");
+
+      // Fetch PDF metadata from JSON file
+      async function fetchPDFs() {
+        try {
+          const response = await fetch("content/addpdfs/addpdfs.json");
+          pdfData = await response.json();
+          renderPDFs(pdfData);
+        } catch (error) {
+          console.error("Error fetching PDF metadata:", error);
+        }
+      }
+
+      // Function to render PDFs
+      function renderPDFs(data) {
+        pdfGrid.innerHTML = "";
+        data.forEach((pdf) => {
+          const col = document.createElement("div");
+          col.className = "col-md-3";
+          col.innerHTML = `
+                    <div class="card pdf-card">
+                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="PDF Thumbnail">
+                        <div class="card-body">
+                            <h5 class="card-title">${pdf.title}</h5>
+                            <p class="card-text">Subject: ${pdf.subject}</p>
+                            <p class="card-text">Size: ${pdf.size}</p>
+                            <p class="card-text">Date: ${pdf.date}</p>
+                            <button class="btn btn-primary" onclick="viewPDF('${pdf.filePath}')">View</button>
+                            <a href="${pdf.filePath}" class="btn btn-success" download>Download</a>
+                        </div>
+                    </div>
+                `;
+          pdfGrid.appendChild(col);
+        });
+      }
+
+      // View PDF in the same tab
+      function viewPDF(filePath) {
+        pdfViewer.src = filePath;
+        gridView.style.display = "none";
+        pdfViewerSection.style.display = "block";
+      }
+
+      // Switch to Grid View
+      function showGridView() {
+        pdfViewerSection.style.display = "none";
+        gridView.style.display = "block";
+      }
+
+      // Search functionality
+      document.getElementById("searchInput").addEventListener("input", (e) => {
+        const query = e.target.value.toLowerCase();
+        const filteredData = pdfData.filter(
+          (pdf) =>
+            pdf.title.toLowerCase().includes(query) ||
+            pdf.subject.toLowerCase().includes(query)
+        );
+        renderPDFs(filteredData);
+      });
+
+      // Sort functionality
+      document.getElementById("sortSelect").addEventListener("change", (e) => {
+        const sortKey = e.target.value;
+        const sortedData = [...pdfData].sort((a, b) => {
+          if (sortKey === "size") {
+            return parseFloat(a.size) - parseFloat(b.size);
+          }
+          return a[sortKey].localeCompare(b[sortKey]);
+        });
+        renderPDFs(sortedData);
+      });
+
+      // Initialize by fetching data
+      fetchPDFs();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2024 VTU Study Hub. All rights reserved.</p>
+      <p>
+        <a href="privacy.html">Privacy Policy</a> |
+        <a href="terms.html">Terms of Service</a>
+      </p>
+    </footer>
+  </body>
+</html>

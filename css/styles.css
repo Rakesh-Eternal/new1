@@ -1,0 +1,370 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #faf4fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header and Navigation */
+/* Navigation Bar */
+#navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #0099cc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+#navbar .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  list-style: none;
+}
+
+#navbar .menu li {
+  margin: 0 20px;
+}
+
+#navbar .menu li a {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+#navbar .menu li a:hover {
+  color: #ff6600;
+}
+
+/* Hero Section */
+#hero {
+  background: linear-gradient(45deg, #00072d, #7066ff);
+  color: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+#hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+#hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+#hero .cta-button {
+  padding: 12px 24px;
+  background-color: #ff6600;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#hero .cta-button:hover {
+  background-color: #e55b00;
+}
+
+/* Key Features Section */
+#features {
+  background-color: #0a2472;
+  padding: 60px 20px;
+}
+
+#features .container {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  text-align: center;
+  flex: 1 1 calc(33.33% - 40px);
+  background-color: #61c4c4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgb(223, 209, 14);
+}
+
+.feature-card .iconify {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #84098f;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #555;
+}
+/* Blog Highlights Section */
+#blog-highlights {
+  background-color: #386fa4;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#blog-highlights h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.blog-posts {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  color: #333;
+  gap: 20px;
+}
+
+.post {
+  background-color: #ffe0e9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 45%;
+  max-width: 600px;
+  transition: transform 0.3s ease;
+}
+
+.post:hover {
+  transform: translateY(-10px);
+}
+
+.post-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  margin: 20px;
+  color: #333;
+}
+
+h3 a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+h3 a:hover {
+  text-decoration: underline;
+}
+
+.snippet {
+  font-family: "Lora", serif;
+  font-size: 1rem;
+  color: #666;
+  padding: 0 20px 20px;
+  line-height: 1.5;
+}
+
+.post-meta {
+  font-size: 0.9rem;
+  color: #888;
+  padding: 10px 20px;
+}
+
+.post-meta span {
+  margin-right: 10px;
+}
+
+.author {
+  font-weight: bold;
+}
+
+.category {
+  text-transform: capitalize;
+}
+
+.date {
+  color: #007bff;
+}
+
+@media (max-width: 768px) {
+  .blog-posts {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .post {
+    width: 80%;
+  }
+}
+
+/* Call-to-Action Section */
+#cta {
+  background-color: #0099cc;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#cta p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+#cta .cta-button {
+  padding: 14px 28px;
+  background-color: #ff6600;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+#cta .cta-button:hover {
+  background-color: #e55b00;
+}
+
+/* Footer Section */
+footer {
+  background-color: #2d3a4f;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .footer-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 10px;
+}
+
+footer .footer-links a:hover {
+  color: #ff6600;
+}
+
+footer .social-media {
+  margin: 20px 0;
+}
+
+footer .social-icon {
+  color: white;
+  font-size: 2rem;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+footer .social-icon:hover {
+  color: #ff6600;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  #navbar .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #features .container,
+  .steps,
+  .testimonials-container,
+  .blog-posts {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-card,
+  .step,
+  .testimonial,
+  .post {
+    flex: 1 1 100%;
+    margin-bottom: 30px;
+  }
+
+  #hero h1 {
+    font-size: 2.5rem;
+  }
+
+  #hero p {
+    font-size: 1.1rem;
+  }
+
+  #cta h2 {
+    font-size: 2rem;
+  }
+
+  #cta p {
+    font-size: 1rem;
+  }
+}
+/* Social Media Icons Styling */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Add some spacing between the icons */
+  margin-top: 30px;
+}
+
+.social-icon {
+  font-size: 3rem; /* Increase icon size */
+  color: #333; /* Default icon color */
+  transition: transform 0.3s ease, color 0.3s ease;
+  text-decoration: none; /* Remove underline */
+}
+
+.social-icon:hover {
+  transform: scale(1.2); /* Icon zoom effect on hover */
+  color: #4caf50; /* Change color on hover (green for better visibility) */
+}
+
+/* Responsive Icons */
+@media (max-width: 768px) {
+  .social-links {
+    flex-direction: column; /* Stack the icons on smaller screens */
+    align-items: center;
+  }
+
+  .social-icon {
+    font-size: 2.5rem; /* Decrease size on smaller screens */
+  }
+}

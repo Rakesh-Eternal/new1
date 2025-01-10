@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Sample",
+    "subject": "Finance",
+    "filePath": "pdfs/1.pdf",
+    "size": "2 MB",
+    "date": "2024-01-10"
+  },
+  {
+    "title": "Document 2",
+    "subject": "Science",
+    "filePath": "pdfs/document2.pdf",
+    "size": "1.5 MB",
+    "date": "2024-02-15"
+  },
+  {
+    "title": "Document 3",
+    "subject": "Technology",
+    "filePath": "pdfs/document3.pdf",
+    "size": "3 MB",
+    "date": "2024-03-20"
+  },
+  {
+    "title": "Document 4",
+    "subject": "Health",
+    "filePath": "pdfs/document4.pdf",
+    "size": "4 MB",
+    "date": "2024-04-25"
+  },
+  {
+    "title": "Document 3",
+    "subject": "Technology",
+    "filePath": "pdfs/document3.pdf",
+    "size": "3 MB",
+    "date": "2024-03-20"
+  },
+  {
+    "title": "Document 3",
+    "subject": "Technology",
+    "filePath": "pdfs/document3.pdf",
+    "size": "3 MB",
+    "date": "2024-03-20"
+  },
+  {
+    "title": "Document 3",
+    "subject": "Technology",
+    "filePath": "pdfs/document3.pdf",
+    "size": "3 MB",
+    "date": "2024-03-20"
+  }
+]
