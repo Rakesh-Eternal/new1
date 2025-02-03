@@ -1,18 +1,12 @@
-function openGmail() {
-  // Get the email address you want to send the message to
-  var toAddress = "rakeshg9019112106@gmail.com.com"; // Replace this with your desired recipient email address
+// Email functionality using mailto
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault();
 
-  // Construct the Gmail compose URL with the "to" address
-  var gmailUrl =
-    "https://mail.google.com/mail/?view=cm&fs=1&to=" +
-    encodeURIComponent(toAddress);
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var message = document.getElementById("message").value;
 
-  // Optionally, add subject and body parameters
-  var subject = "Hello from Gmail";
-  var body = "This is a test email sent via a button click.";
-  gmailUrl +=
-    "&su=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+  var mailtoLink = `mailto:rakeshg14112001@gmail.com?subject=Message from ${name}&body=Email: ${email}%0D%0A%0D%0A${message}`;
 
-  // Open Gmail in a new tab or window
-  window.open(gmailUrl, "_blank");
-}
+  window.location.href = mailtoLink;
+});
