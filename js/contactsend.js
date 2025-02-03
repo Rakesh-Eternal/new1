@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Initialize Email.js with your User ID
-    emailjs.init("your-emailjs-user-id");
+    emailjs.init("mxuAs0ef52A2t-7iN");
 
     // Select the form
     document.querySelector(".contact-form").addEventListener("submit", function (event) {
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Send email using Email.js
-        emailjs.send("your_service_id", "your_template_id", {
+        emailjs.send("service_2d8knku", "template_wcozjor", {
             from_name: formData.name,
             from_email: formData.email,
             message: formData.message,
