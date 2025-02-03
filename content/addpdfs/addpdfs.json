@@ -1,30 +1,23 @@
 [
   {
-    "title": "Sample",
-    "subject": "Finance",
-    "filePath": "pdfs/1.pdf",
-    "size": "2 MB",
-    "date": "2024-01-10"
+    "title": "1st sem 1st Internals Question Papers",
+    "subject": "All",
+    "filePath": "pdfs/1st year 1st sem 1st Internal MBA(DM).pdf",
+    "size": "6 MB",
+    "date": "2025-02-03"
   },
   {
-    "title": "Document 2",
-    "subject": "Science",
-    "filePath": "pdfs/document2.pdf",
-    "size": "1.5 MB",
-    "date": "2024-02-15"
+    "title": "1st sem 2nd Internals Question Papers",
+    "subject": "All",
+    "filePath": "pdfs/1st year 1st sem 2nd Internal MBA(DM).pdf",
+    "size": "7 MB",
+    "date": "2025-02-03"
   },
   {
-    "title": "Document 3",
-    "subject": "Technology",
-    "filePath": "pdfs/document3.pdf",
-    "size": "3 MB",
-    "date": "2024-03-20"
-  },
-  {
-    "title": "Document 4",
-    "subject": "Health",
-    "filePath": "pdfs/document4.pdf",
-    "size": "4 MB",
-    "date": "2024-04-25"
+    "title": "1st Sem Final Question Papers",
+    "subject": "All",
+    "filePath": "pdfs/1st sem Final exam QP.pdf",
+    "size": "10 MB",
+    "date": "2025-02-03"
   }
 ]
