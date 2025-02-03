@@ -1,6 +1,6 @@
 function openGmail() {
   // Get the email address you want to send the message to
-  var toAddress = "example@example.com"; // Replace this with your desired recipient email address
+  var toAddress = "rakeshg9019112106@gmail.com.com"; // Replace this with your desired recipient email address
 
   // Construct the Gmail compose URL with the "to" address
   var gmailUrl =
