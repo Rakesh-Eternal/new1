@@ -70,33 +70,27 @@ a {
   margin-top: 10px;
 }
 
-/* Contact Form */
-form {
-  display: flex;
-  flex-direction: column;
+/* Contact Form Section */
+#contact {
+  background-color: #8d5f8f;
+  padding: 60px 30px;
+  margin: 40px auto;
+  max-width: 900px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-form label {
-  margin-top: 10px;
+#contact h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #050505;
 }
 
-form input, form textarea {
-  background-color: #000;
-  color: #fff;
-  border: 1px solid #00ff00;
-form button {
-  margin-top: 15px;
-  padding: 10px;
-  background-color: #00ff00;
-  color: #000;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-form button:hover {
-  background-color: #fff;
-  color: #00ff00;
+#contact p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #000000;
+  margin-bottom: 30px;
 }
 
 /* Form Styling */
