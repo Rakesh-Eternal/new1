@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     emailjs.init("mxuAs0ef52A2t-7iN");
 
     // Select the form
-    document.querySelector(".contact-form").addEventListener("submit", function (event) {
+    document.querySelector(".contact").addEventListener("submit", function (event) {
         event.preventDefault(); // Prevent form from reloading the page
 
         // Collect form data
