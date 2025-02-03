@@ -78,7 +78,7 @@
       // Fetch PDF metadata from JSON file
       async function fetchPDFs() {
         try {
-          const response = await fetch("content/addpdfs/addpdfs.json");
+          const response = await fetch("content/addpdfs/addpdfs2.json");
           pdfData = await response.json();
           renderPDFs(pdfData);
         } catch (error) {
