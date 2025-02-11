@@ -10,10 +10,98 @@
 
   gtag('config', 'G-E0SKVNF7KB');
 </script>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.createElement("button");
+    toggleButton.classList.add("menu-toggle");
+    toggleButton.innerHTML = "☰";
+    document.getElementById("navbar").prepend(toggleButton);
+
+    const menu = document.querySelector(".menu");
+    toggleButton.addEventListener("click", function () {
+      menu.classList.toggle("active");
+    });
+  });
+</script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Privacy Policy & Terms | Prometheus Wisdom</title>
     <style>
+      /* Responsive Navigation Menu */
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: white;
+  background: none;
+  border: none;
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  #navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #0099cc;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu li {
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Adjust layout for mobile */
+  main {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  section {
+    min-height: auto;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+
+  footer {
+    padding: 15px;
+  }
+}
+
       /* General Reset */
       * {
         margin: 0;
@@ -193,6 +281,7 @@
     </style>
   </head>
   <body>
+    
     <!-- Header and Navigation -->
     <header>
       <nav id="navbar">
