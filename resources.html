@@ -19,6 +19,20 @@
   <body>
     <!-- Header Section -->
     <header>
+      <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.createElement("button");
+    toggleButton.classList.add("menu-toggle");
+    toggleButton.innerHTML = "☰";
+    document.getElementById("navbar").prepend(toggleButton);
+
+    const menu = document.querySelector(".menu");
+    toggleButton.addEventListener("click", function () {
+      menu.classList.toggle("active");
+    });
+  });
+</script>
+
       <nav id="navbar">
         <button class="menu-toggle">☰</button>
         <ul class="menu">
