@@ -10,6 +10,20 @@
 
   gtag('config', 'G-E0SKVNF7KB');
 </script>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.createElement("button");
+    toggleButton.classList.add("menu-toggle");
+    toggleButton.innerHTML = "☰";
+    document.getElementById("navbar").prepend(toggleButton);
+
+    const menu = document.querySelector(".menu");
+    toggleButton.addEventListener("click", function () {
+      menu.classList.toggle("active");
+    });
+  });
+</script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PDF Manager</title>
